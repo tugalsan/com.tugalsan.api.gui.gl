@@ -7,6 +7,7 @@ import org.treblereel.gwt.three4g.materials.SpriteMaterial;
 import org.treblereel.gwt.three4g.math.Vector3;
 import org.treblereel.gwt.three4g.objects.Sprite;
 import com.tugalsan.api.log.client.TGC_Log;
+import com.tugalsan.api.unsafe.client.*;
 
 public class TGC_GLSprite extends TGC_GLLoadable {
 
@@ -40,18 +41,18 @@ public class TGC_GLSprite extends TGC_GLLoadable {
     protected Vector3 lazyScale = new Vector3();
 
     public Sprite getSprite() {
-        if (meshUsedBefore) {
-            try {
+        return TGS_UnSafe.compile(() -> {
+            if (meshUsedBefore) {
                 return (Sprite) sprite.clone();
-            } catch (Exception e) {
-                cloneError = e.getMessage();
-                d.ce("getSprite", "name", name, "cloneError", e);
-                return null;
+            } else {
+                meshUsedBefore = true;
+                return sprite;
             }
-        } else {
-            meshUsedBefore = true;
-            return sprite;
-        }
+        }, e -> {
+            cloneError = e.getMessage();
+            d.ce("getSprite", "name", name, "cloneError", e);
+            return null;
+        });
     }
     public Sprite sprite;
     public String cloneError = null;
