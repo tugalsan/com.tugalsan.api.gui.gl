@@ -14,7 +14,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_3JSPrimativeText3D extends TGC_3JSPrimativeAbstract {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_3JSPrimativeText3D.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_3JSPrimativeText3D.class);
 
     public TGC_3JSPrimativeText3D(TGC_GLProgramAbstract program, CharSequence name, int fontIndex, boolean centerPivot,
             TGC_GLTexture2DAbstract texture, TGC_GLTextureCube environment) {

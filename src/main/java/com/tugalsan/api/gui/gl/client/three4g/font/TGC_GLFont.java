@@ -11,7 +11,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLFont extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLFont.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLFont.class);
 
     public TGC_GLFont(TGC_GLProgramAbstract program, CharSequence url) {
         super(program);

@@ -25,7 +25,7 @@ import com.tugalsan.api.unsafe.client.*;
 
 public class TGC_GLModel extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLModel.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLModel.class);
 
     public static String DracoLoaderDecoderPath = null;
 

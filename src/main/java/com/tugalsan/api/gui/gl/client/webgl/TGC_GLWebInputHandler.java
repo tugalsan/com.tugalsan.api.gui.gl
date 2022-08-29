@@ -5,7 +5,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLWebInputHandler {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLWebInputHandler.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLWebInputHandler.class);
 
     public TGC_GLWebInputHandler() {
         mouseClickXY[0] = mouseClickXY[1] = mouseDoubleClickXY[0] = mouseDoubleClickXY[1] = -1;

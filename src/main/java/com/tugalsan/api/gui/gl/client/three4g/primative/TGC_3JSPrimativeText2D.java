@@ -14,7 +14,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_3JSPrimativeText2D extends TGC_3JSPrimativeAbstract {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_3JSPrimativeText2D.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_3JSPrimativeText2D.class);
     public static int DEF_SEGMENTS() {
         return 12;
     }

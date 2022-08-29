@@ -7,7 +7,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLRenderAnimator {//ANIMATE FUNCTION CONTROLLER 
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLRenderAnimator.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLRenderAnimator.class);
 
     final public TGC_GLProgramAbstract program;
     final private AnimationScheduler.AnimationCallback callback;

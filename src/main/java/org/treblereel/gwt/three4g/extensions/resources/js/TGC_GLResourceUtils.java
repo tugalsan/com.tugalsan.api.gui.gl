@@ -8,7 +8,7 @@ import com.tugalsan.api.log.client.*;
 
 public interface TGC_GLResourceUtils extends ClientBundle {//VARS CANNOT BE PRIVATE!!!
 
-    final static TGC_Log d = TGC_Log.of(TGC_GLResourceUtils.class.getSimpleName());
+    final static TGC_Log d = TGC_Log.of(TGC_GLResourceUtils.class);
 
     final public static TGC_GLResourceUtils INSTANCE = GWT.create(TGC_GLResourceUtils.class);
 

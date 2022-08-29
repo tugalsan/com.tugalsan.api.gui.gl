@@ -14,7 +14,7 @@ import com.tugalsan.api.gui.gl.client.three4g.model.*;
 
 abstract public class TGC_GLProgramAbstract {//MINIMAL PROGRAM 
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLProgramAbstract.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLProgramAbstract.class);
 
     public TGC_GLMath math;
     public TGC_GLColor color;

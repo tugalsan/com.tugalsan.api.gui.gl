@@ -11,7 +11,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLTexture2DUrl extends TGC_GLTexture2DAbstract {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLTexture2DUrl.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLTexture2DUrl.class);
 
     public TGC_GLTexture2DUrl(TGC_GLProgramAbstract program, CharSequence url) {
         super(program);

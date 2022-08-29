@@ -12,7 +12,7 @@ import com.tugalsan.api.unsafe.client.*;
 
 abstract public class TGC_3JSPrimativeAbstract extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_3JSPrimativeAbstract.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_3JSPrimativeAbstract.class);
 
     public TGC_3JSPrimativeAbstract(TGC_GLProgramAbstract program, CharSequence name, TGC_GLTexture2DAbstract texture, TGC_GLTextureCube environment) {
         super(program);

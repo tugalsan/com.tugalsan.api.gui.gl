@@ -11,7 +11,7 @@ import com.tugalsan.api.unsafe.client.*;
 
 public class TGC_GLSprite extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLSprite.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLSprite.class);
 
     public TGC_GLSprite(TGC_GLProgramAbstract program, CharSequence name, TGC_GLTexture2DAbstract texture) {
         super(program);

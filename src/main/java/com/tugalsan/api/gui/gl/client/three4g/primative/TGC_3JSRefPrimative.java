@@ -11,7 +11,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_3JSRefPrimative extends TGC_GLRefAbstract {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_3JSRefPrimative.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_3JSRefPrimative.class);
 
     public TGC_3JSRefPrimative(CharSequence name, TGC_3JSPrimativeAbstract primative) {
         super(primative.program, name);

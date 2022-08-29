@@ -7,7 +7,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLRefSprite extends TGC_GLRefAbstract {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLRefSprite.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLRefSprite.class);
 
     public TGC_GLRefSprite(CharSequence name, TGC_GLSprite sprite) {
         super(sprite.program, name);

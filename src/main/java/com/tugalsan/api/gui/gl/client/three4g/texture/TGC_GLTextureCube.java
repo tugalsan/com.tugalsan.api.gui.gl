@@ -9,7 +9,7 @@ import com.tugalsan.api.cast.client.*;
 
 public class TGC_GLTextureCube extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLTextureCube.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_GLTextureCube.class);
 
     public CubeTexture textureCube = null;
     public String[] urls;
