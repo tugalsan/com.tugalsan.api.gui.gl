@@ -276,7 +276,7 @@
             </resource>
         </resources>
         <plugins>
-            <plugin><!-- jdeps -recursive -summary - -module-path "lib" - -multi-release 18 try1-1.0-SNAPSHOT.jar -->
+            <plugin><!-- jdeps -recursive -summary - -module-path "lib" - -multi-release 19 try1-1.0-SNAPSHOT.jar -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>3.2.1</version>
