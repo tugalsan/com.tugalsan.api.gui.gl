@@ -8,6 +8,8 @@ import java.util.stream.*;
 
 public class TGC_GLFonts extends TGC_GLLoadable {
 
+    final private static boolean PARALLEL = true; //may cause unexpected exception: java.lang.OutOfMemoryError: Java heap space
+
     public TGC_GLFonts(TGC_GLProgramAbstract program, CharSequence... fontUrls) {
         super(program);
         TGS_ListUtils.of(fontUrls).forEach(fontUrl -> add(fontUrl.toString()));
@@ -59,6 +61,6 @@ public class TGC_GLFonts extends TGC_GLLoadable {
 
     @Override
     public void lazyLoad() {
-        childeren.parallelStream().forEach(font -> font.lazyLoad());
+        (PARALLEL ? childeren.parallelStream() : childeren.stream()).forEach(font -> font.lazyLoad());
     }
 }
