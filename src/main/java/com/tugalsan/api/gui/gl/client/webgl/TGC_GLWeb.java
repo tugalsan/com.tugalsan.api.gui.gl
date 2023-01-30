@@ -102,12 +102,12 @@ public class TGC_GLWeb {
 
     public void setCanvasNull(int canvasId) {
         canvasBuffer[canvasId] = null;
-        //TODO GL CLEAR
+        //TODO setCanvasNull GL CLEAR
     }
 
     public void setImageNull(int imageId) {
         imageBuffer.set(imageId, null);
-        //TODO GL CLEAR
+        //TODO setImageNull GL CLEAR
     }
 
     public void clearImageList() {
