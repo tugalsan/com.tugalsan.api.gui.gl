@@ -6,7 +6,7 @@ import com.shc.webgl4j.client.WebGL10;
 import com.shc.webgl4j.client.WebGL20;
 import com.shc.webgl4j.client.WebGLContext;
 import com.tugalsan.api.log.client.TGC_Log;
-import com.tugalsan.api.executable.client.TGS_ExecutableType2;
+import com.tugalsan.api.runnable.client.TGS_RunnableType2;
  
 public class TGC_GLWebCanvas {
  
@@ -32,9 +32,9 @@ public class TGC_GLWebCanvas {
     public int width, height, performansWidth, performansHeight;
     public Integer qualityPercent_default100;
     public TGC_GLWeb gl;
-    public TGS_ExecutableType2<Integer, Boolean> onFocused;
+    public TGS_RunnableType2<Integer, Boolean> onFocused;
 
-    public TGC_GLWebCanvas(int id, TGC_GLWeb gl, int xOffSet, int yOffSet, int width, int height, Integer qualityPercent_default100, TGC_GLWebRender render, TGS_ExecutableType2<Integer, Boolean> onFocused) {
+    public TGC_GLWebCanvas(int id, TGC_GLWeb gl, int xOffSet, int yOffSet, int width, int height, Integer qualityPercent_default100, TGC_GLWebRender render, TGS_RunnableType2<Integer, Boolean> onFocused) {
         this.onFocused = onFocused;
         this.canvasId = id;
         canvas = Canvas.createIfSupported();
@@ -52,8 +52,8 @@ public class TGC_GLWebCanvas {
             attributes.setPremultipliedAlpha(true);//default true
             attributes.setPreserveDrawingBuffer(false);//default false
             context = isWebGL20 ? WebGL10.createContext(canvas, attributes) : WebGL20.createContext(canvas, attributes);
-            canvas.addFocusHandler(e -> onFocused.execute(id, true));
-            canvas.addBlurHandler(e -> onFocused.execute(id, false));
+            canvas.addFocusHandler(e -> onFocused.run(id, true));
+            canvas.addBlurHandler(e -> onFocused.run(id, false));
         }
         setWidget(gl, xOffSet, yOffSet, width, height, qualityPercent_default100);
     }

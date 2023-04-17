@@ -116,7 +116,7 @@ public class TGC_GLModel extends TGC_GLLoadable {
     }
 
     public Scene getScene() {
-        return TGS_UnSafe.compile(() -> {
+        return TGS_UnSafe.call(() -> {
             if (sceneUsedBefore) {
                 if (FIX_SCENE_CLONNING()) {
                     return Js.uncheckedCast(SkeletonUtils.clone(scene));

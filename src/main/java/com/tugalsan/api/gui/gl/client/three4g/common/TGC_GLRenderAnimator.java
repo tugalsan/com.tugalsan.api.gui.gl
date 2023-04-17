@@ -42,6 +42,8 @@ public class TGC_GLRenderAnimator {//ANIMATE FUNCTION CONTROLLER
     public TGC_GLRenderAnimator(TGC_GLProgramAbstract program) {
         this.program = program;
         this.callback = new AnimationScheduler.AnimationCallback() {
+            
+            
             @Override
             public void execute(double timestamp_current) {
                 if (minMS < timestamp_current - timestamp_previous) {//FPS CONTROL

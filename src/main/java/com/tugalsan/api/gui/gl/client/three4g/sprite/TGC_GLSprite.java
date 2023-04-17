@@ -41,7 +41,7 @@ public class TGC_GLSprite extends TGC_GLLoadable {
     protected Vector3 lazyScale = new Vector3();
 
     public Sprite getSprite() {
-        return TGS_UnSafe.compile(() -> {
+        return TGS_UnSafe.call(() -> {
             if (meshUsedBefore) {
                 return (Sprite) sprite.clone();
             } else {

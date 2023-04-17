@@ -45,7 +45,7 @@ abstract public class TGC_3JSPrimativeAbstract extends TGC_GLLoadable {
     protected Vector3 lazyScale = new Vector3();
 
     public Mesh getMesh() {
-        return TGS_UnSafe.compile(() -> {
+        return TGS_UnSafe.call(() -> {
             if (meshUsedBefore) {
                 return (Mesh) mesh.clone();
             } else {
