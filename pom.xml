@@ -162,7 +162,7 @@
         </dependency>
         
         <dependency>
-            <groupId>com.tugalsan</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>com.tugalsan.api.math</artifactId>
             <exclusions>
                 <exclusion>
@@ -181,7 +181,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.tugalsan</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>com.tugalsan.api.cast</artifactId>
             <exclusions>
                 <exclusion>
@@ -200,7 +200,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.tugalsan</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>com.tugalsan.api.shape</artifactId>
             <exclusions>
                 <exclusion>
@@ -219,7 +219,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.tugalsan</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>com.tugalsan.api.log</artifactId>
             <exclusions>
                 <exclusion>
@@ -238,7 +238,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.tugalsan</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>com.tugalsan.api.list</artifactId>
             <exclusions>
                 <exclusion>
