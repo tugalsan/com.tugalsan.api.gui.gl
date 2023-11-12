@@ -47,7 +47,7 @@
                     <artifactId>gwt-core</artifactId>
                 </exclusion>
             </exclusions>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.goharsha</groupId>
@@ -276,7 +276,7 @@
             </resource>
         </resources>
         <plugins>
-            <plugin><!-- jdeps -recursive -summary - -module-path "lib" - -multi-release 19 try1-1.0-SNAPSHOT.jar -->
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>3.3.0</version>
@@ -309,13 +309,13 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <release>21</release><enablePreview>true</enablePreview>
+                    <release>21</release>
+                     <!--  <enablePreview>true</enablePreview>
                     <compilerArgs>
-                       
-                        <arg>--add-modules</arg>
+                       <arg>- -add-modules</arg>
                         <arg>jdk.incubator.vector</arg>
-                        <!-- <arg>-XX:+EnableDynamicAgentLoading -->
-                    </compilerArgs>
+                        <arg>-XX:+EnableDynamicAgentLoading 
+                    </compilerArgs> -->
                 </configuration>
             </plugin>
         </plugins>
