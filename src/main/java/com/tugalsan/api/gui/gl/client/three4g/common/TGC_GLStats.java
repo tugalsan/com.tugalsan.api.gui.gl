@@ -28,7 +28,7 @@ public class TGC_GLStats {
         setVisible(visible);
     }
     final public static TGS_ShapeDimension dimension = new TGS_ShapeDimension(80, 48);
-    final private TGC_GLProgramAbstract program;
+    final public TGC_GLProgramAbstract program;
     final public TGC_3JSStatsNative stats;
     public HTMLDivElement container;
     public TGS_ShapeRectangle positionAndLocation;

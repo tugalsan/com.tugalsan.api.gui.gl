@@ -11,7 +11,7 @@ public class TGC_GLCanvas {
     final public HTMLDivElement containerDiv;
 
     public float calculateAspect() {
-        TGS_ShapeRectangle<Integer> p = currentRect;
+        var p = currentRect;
         return 1f * p.width / p.height;
     }
 

@@ -3,11 +3,10 @@ package com.tugalsan.api.gui.gl.client.three4g.common;
 import com.google.gwt.animation.client.AnimationScheduler;
 import com.tugalsan.api.gui.gl.client.three4g.TGC_GLProgramAbstract;
 import org.treblereel.gwt.three4g.core.Clock;
-import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLRenderAnimator {//ANIMATE FUNCTION CONTROLLER 
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLRenderAnimator.class);
+//    final private static TGC_Log d = TGC_Log.of(TGC_GLRenderAnimator.class);
 
     final public TGC_GLProgramAbstract program;
     final private AnimationScheduler.AnimationCallback callback;

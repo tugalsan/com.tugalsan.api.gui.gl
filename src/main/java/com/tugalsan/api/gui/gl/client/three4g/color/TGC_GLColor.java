@@ -5,14 +5,14 @@ import org.treblereel.gwt.three4g.math.Color;
 
 public class TGC_GLColor {//EXAMPLS COLOR
 
-    TGC_GLProgramAbstract program;
+    final public TGC_GLProgramAbstract program;
 
     public TGC_GLColor(TGC_GLProgramAbstract program) {
         this.program = program;
     }
 
     public Color createColor(int r, int g, int b) {
-        float max = 255f;
+        var max = 255f;
         return new Color(r / max, g / max, b / max);
     }
 

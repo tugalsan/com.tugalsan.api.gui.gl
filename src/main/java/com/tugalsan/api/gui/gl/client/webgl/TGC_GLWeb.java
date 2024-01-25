@@ -83,7 +83,7 @@ public class TGC_GLWeb {
         if (checkIfFocused) {
             render(ms_cur, canvasFocusedId, false);
         } else {
-            for (int canvasId = 0; canvasId < canvasCount; canvasId++) {
+            for (var canvasId = 0; canvasId < canvasCount; canvasId++) {
                 render(ms_cur, canvasId, checkIfFocused);
             }
         }
@@ -115,7 +115,7 @@ public class TGC_GLWeb {
     }
 
     public void clearCanvasList() {
-        for (int i = 0; i < canvasCount; i++) {
+        for (var i = 0; i < canvasCount; i++) {
             setCanvasNull(i);
         }
         canvasCount = 0;

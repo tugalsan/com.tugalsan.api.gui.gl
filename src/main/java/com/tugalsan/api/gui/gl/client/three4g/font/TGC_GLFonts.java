@@ -37,7 +37,7 @@ public class TGC_GLFonts extends TGC_GLLoadable {
     }
 
     final public TGC_GLFont add(CharSequence url) {
-        for (TGC_GLFont font : childeren) {
+        for (var font : childeren) {
             if (font.url.equals(url.toString())) {
                 return font;
             }

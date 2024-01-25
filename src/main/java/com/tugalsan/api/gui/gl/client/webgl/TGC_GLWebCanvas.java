@@ -12,7 +12,7 @@ public class TGC_GLWebCanvas {
  
     final private static TGC_Log d = TGC_Log.of(TGC_GLWebCanvas.class);
 
-    public void setWidget(TGC_GLWeb gl, int xOffSet, int yOffSet, int width, int height, Integer qualityPercent_default100) {
+    final public void setWidget(TGC_GLWeb gl, int xOffSet, int yOffSet, int width, int height, Integer qualityPercent_default100) {
         this.gl = gl;
         canvas.setSize(width + "px", height + "px");
         RootPanel.get().add(canvas, xOffSet, yOffSet);

@@ -4,12 +4,11 @@ import com.tugalsan.api.gui.gl.client.three4g.common.*;
 import com.tugalsan.api.gui.gl.client.three4g.scene.*;
 import com.tugalsan.api.list.client.*;
 import java.util.*;
-import com.tugalsan.api.log.client.*;
 import java.util.stream.*;
 
 public class TGC_GLModels extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLScene.class);
+//    final private static TGC_Log d = TGC_Log.of(TGC_GLScene.class);
 
     public TGC_GLModels(TGC_GLScene parent) {
         super(parent.program);

@@ -10,11 +10,10 @@ import com.tugalsan.api.gui.gl.client.three4g.primative.TGC_3JSPrimatives;
 import org.treblereel.gwt.three4g.math.Color;
 import org.treblereel.gwt.three4g.scenes.Fog;
 import org.treblereel.gwt.three4g.scenes.Scene;
-import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLScene extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLScene.class);
+//    final private static TGC_Log d = TGC_Log.of(TGC_GLScene.class);
 
     public TGC_GLScene(TGC_GLProgramAbstract program, CharSequence name) {
         super(program);

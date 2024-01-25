@@ -49,8 +49,8 @@ public class TGC_3JSRefPrimative extends TGC_GLRefAbstract {
             }
             if (edgeLineVisible) {
                 if (edgeLine == null) {
-                    EdgesGeometry geometry = new EdgesGeometry(childMesh.geometry);
-                    LineBasicMaterial material = new LineBasicMaterial();
+                    var geometry = new EdgesGeometry(childMesh.geometry);
+                    var material = new LineBasicMaterial();
                     material.color = program.color.getWhite_0xFFFFFF();
                     edgeLine = new LineSegments(geometry, material);
                     edgeLine.position.copy(childMesh.position);

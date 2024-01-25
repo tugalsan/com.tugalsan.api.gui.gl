@@ -175,7 +175,7 @@ public class TGC_GLModel extends TGC_GLLoadable {
             if (o3d instanceof Mesh) {
                 MeshStandardMaterial material;
                 if (FIX_ON_LOAD_Object3D()) {
-                    Object oMaterial = Js.asPropertyMap(o3d).get("material");
+                    var oMaterial = Js.asPropertyMap(o3d).get("material");
                     material = Js.uncheckedCast(oMaterial);
                 } else {
                     material = o3d.getProperty("material");
@@ -223,7 +223,7 @@ public class TGC_GLModel extends TGC_GLLoadable {
                         d.ci("lazyLoad", "onLoad", "url", url, "animationClips.length", animationClips.length);
                     }
                 } else if (FIX_ON_LOAD_Object3D()) {
-                    Object oAnimations = Js.asPropertyMap(o).get("animations");
+                    var oAnimations = Js.asPropertyMap(o).get("animations");
                     if (oAnimations != null) {
                         animationClips = Js.uncheckedCast(oAnimations);
                         d.ci("lazyLoad", "onLoad", "url", url, "FIX_ON_LOAD_Object3D", "animationClips.length", animationClips.length);
@@ -278,7 +278,7 @@ public class TGC_GLModel extends TGC_GLLoadable {
                     if (keepMaterial) {
                         MeshStandardMaterial material;
                         if (FIX_ON_LOAD_Object3D()) {
-                            Object oMaterial = Js.asPropertyMap(o3d).get("material");
+                            var oMaterial = Js.asPropertyMap(o3d).get("material");
                             material = Js.uncheckedCast(oMaterial);
                         } else {
                             material = o3d.getProperty("material");

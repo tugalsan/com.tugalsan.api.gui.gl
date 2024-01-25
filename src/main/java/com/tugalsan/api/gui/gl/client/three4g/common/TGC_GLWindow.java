@@ -15,7 +15,7 @@ public class TGC_GLWindow {
         window.addEventListener("resize", el -> program.onWindowResize());
 
     }
-    final private TGC_GLProgramAbstract program;
+    final public TGC_GLProgramAbstract program;
     final public TGC_3JSWindowNative window;
 
     public TGS_ShapeLocation<Integer> calculateCenter(TGS_ShapeDimension<Integer> dimension) {

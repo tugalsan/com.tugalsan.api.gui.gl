@@ -80,7 +80,7 @@ public class TGC_GLWebSupportUtils {
         }
         webglInfo.append("</p>");
 
-        WebGLContext.Attributes attributes = WebGLContext.getCurrent().getAttributes();
+        var attributes = WebGLContext.getCurrent().getAttributes();
         webglInfo.append("<h2>Context Attributes</h2>");
         webglInfo.append("<p style='padding-left: 40px;'>");
         {

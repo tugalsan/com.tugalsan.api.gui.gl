@@ -8,7 +8,6 @@ import com.tugalsan.api.gui.gl.client.three4g.font.TGC_GLFont;
 import org.treblereel.gwt.three4g.geometries.TextBufferGeometry;
 import org.treblereel.gwt.three4g.geometries.parameters.TextGeometryParameters;
 import org.treblereel.gwt.three4g.materials.MeshPhongMaterial;
-import org.treblereel.gwt.three4g.math.Vector3;
 import org.treblereel.gwt.three4g.objects.Mesh;
 import com.tugalsan.api.log.client.TGC_Log;
 
@@ -61,7 +60,7 @@ public class TGC_3JSPrimativeText3D extends TGC_3JSPrimativeAbstract {
         mesh = new Mesh(geo, material);
 
         if (centerPivot) {
-            Vector3 center = calculatePositionCenter();
+            var center = calculatePositionCenter();
             mesh.geometry.translate(center.x, center.y, center.z);
         }
         return this;

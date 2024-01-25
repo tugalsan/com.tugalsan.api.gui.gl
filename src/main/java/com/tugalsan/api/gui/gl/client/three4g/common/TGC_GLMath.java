@@ -6,7 +6,7 @@ import org.treblereel.gwt.three4g.math.Vector2;
 
 public class TGC_GLMath {//EXTEND MATH LIB ON DEMAND
 
-    TGC_GLProgramAbstract program;
+    final public TGC_GLProgramAbstract program;
 
     public TGC_GLMath(TGC_GLProgramAbstract program) {
         this.program = program;

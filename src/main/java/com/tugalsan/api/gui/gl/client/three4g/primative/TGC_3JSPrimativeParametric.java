@@ -76,44 +76,37 @@ public class TGC_3JSPrimativeParametric extends TGC_3JSPrimativeAbstract {
      * @author Dmitrii Tikhomirov <chani@me.com>
      * Created by treblereel on 7/12/18.
      */
-    public static ParametricGeometryFunction func_pellipticParaboloid1 = new ParametricGeometryFunction() {
-        @Override
-        public Vector3 call(float u, float v) {
-            u *= 1;
-            v *= (float) (360 * Math.PI / 180);
-
-            var a = 200; // semimajor axis a
-            var b = 400; // semimajor axis b
-            var h = 350; // height
-
-            var x = a * Math.sqrt(u) * Math.cos(v);
-            var y = b * Math.sqrt(u) * Math.sin(v);
-            var z = u * h;
-
-            return new Vector3((float) x, (float) y, (float) z);
-        }
+    public static ParametricGeometryFunction func_pellipticParaboloid1 = (float u, float v) -> {
+        u *= 1;
+        v *= (float) (360 * Math.PI / 180);
+        
+        var a = 200; // semimajor axis a
+        var b = 400; // semimajor axis b
+        var h = 350; // height
+        
+        var x = a * Math.sqrt(u) * Math.cos(v);
+        var y = b * Math.sqrt(u) * Math.sin(v);
+        var z = u * h;
+        
+        return new Vector3((float) x, (float) y, (float) z);
     };
 
     /**
      * @author Dmitrii Tikhomirov <chani@me.com>
      * Created by treblereel on 7/12/18.
      */
-    public static ParametricGeometryFunction func_pellipticParaboloid2 = new ParametricGeometryFunction() {
-        @Override
-        public Vector3 call(float u, float v) {
-
-            u *= 1;
-            v *= (float) (240 * Math.PI / 180);
-
-            var a = 300; // semimajor axes
-            var h = 300; // height
-            var m = Math.sin(u * (135 * Math.PI / 180)); // mod
-
-            var x = a * Math.sqrt(u) * Math.cos(v) * m;
-            var y = a * Math.sqrt(u) * Math.sin(v) * m;
-            var z = u * h;
-
-            return new Vector3((float) x, (float) y, (float) z);
-        }
+    public static ParametricGeometryFunction func_pellipticParaboloid2 = (float u, float v) -> {
+        u *= 1;
+        v *= (float) (240 * Math.PI / 180);
+        
+        var a = 300; // semimajor axes
+        var h = 300; // height
+        var m = Math.sin(u * (135 * Math.PI / 180)); // mod
+        
+        var x = a * Math.sqrt(u) * Math.cos(v) * m;
+        var y = a * Math.sqrt(u) * Math.sin(v) * m;
+        var z = u * h;
+        
+        return new Vector3((float) x, (float) y, (float) z);
     };
 }
