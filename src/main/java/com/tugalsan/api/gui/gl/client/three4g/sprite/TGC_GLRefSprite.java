@@ -23,15 +23,9 @@ public class TGC_GLRefSprite extends TGC_GLRefAbstract {
                 childSprite = sprite.getSprite();
                 sprite.sprite.matrixAutoUpdate = false;
                 childSprite.matrixAutoUpdate = false;
-                if (childSprite == null) {
-                    errorMessage = sprite.cloneError;
-                    status = TGC_GLLoadable.STATUS_ERROR();
-                    d.ci( "lazyLoad", "childSprite == null", "name", name, "errorMessage", errorMessage);
-                } else {
-                    scene.add(childSprite);
-                    status = TGC_GLLoadable.STATUS_LOADED();
-                    d.ci( "lazyLoad", "loaded", "name", name);
-                }
+                scene.add(childSprite);
+                status = TGC_GLLoadable.STATUS_LOADED();
+                d.ci("lazyLoad", "loaded", "name", name);
             }
         }
         sprite.lazyLoad();

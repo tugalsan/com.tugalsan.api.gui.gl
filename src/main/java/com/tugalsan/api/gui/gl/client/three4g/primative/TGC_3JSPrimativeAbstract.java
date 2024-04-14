@@ -8,7 +8,6 @@ import org.treblereel.gwt.three4g.core.BufferGeometry;
 import org.treblereel.gwt.three4g.math.Vector3;
 import org.treblereel.gwt.three4g.objects.Mesh;
 import com.tugalsan.api.log.client.TGC_Log;
-import com.tugalsan.api.unsafe.client.*;
 
 abstract public class TGC_3JSPrimativeAbstract extends TGC_GLLoadable {
 
@@ -45,20 +44,13 @@ abstract public class TGC_3JSPrimativeAbstract extends TGC_GLLoadable {
     protected Vector3 lazyScale = new Vector3();
 
     public Mesh getMesh() {
-        return TGS_UnSafe.call(() -> {
-            if (meshUsedBefore) {
-                return (Mesh) mesh.clone();
-            } else {
-                meshUsedBefore = true;
-                return mesh;
-            }
-        }, e -> {
-            cloneError = e.getMessage();
-            d.ce("getMesh", "name", name, "EXCEPTION", e);
-            return null;
-        });
+        if (meshUsedBefore) {
+            return (Mesh) mesh.clone();
+        } else {
+            meshUsedBefore = true;
+            return mesh;
+        }
     }
-    public String cloneError = null;
 
     public boolean isMeshUsedBefore() {
         return meshUsedBefore;

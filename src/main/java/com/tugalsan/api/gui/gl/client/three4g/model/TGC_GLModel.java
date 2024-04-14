@@ -21,7 +21,6 @@ import org.treblereel.gwt.three4g.math.Vector3;
 import org.treblereel.gwt.three4g.objects.Mesh;
 import org.treblereel.gwt.three4g.scenes.Scene;
 import com.tugalsan.api.log.client.TGC_Log;
-import com.tugalsan.api.unsafe.client.*;
 
 public class TGC_GLModel extends TGC_GLLoadable {
 
@@ -116,24 +115,17 @@ public class TGC_GLModel extends TGC_GLLoadable {
     }
 
     public Scene getScene() {
-        return TGS_UnSafe.call(() -> {
-            if (sceneUsedBefore) {
-                if (FIX_SCENE_CLONNING()) {
-                    return Js.uncheckedCast(SkeletonUtils.clone(scene));
-                } else {
-                    return (Scene) scene.clone();
-                }
+        if (sceneUsedBefore) {
+            if (FIX_SCENE_CLONNING()) {
+                return Js.uncheckedCast(SkeletonUtils.clone(scene));
             } else {
-                sceneUsedBefore = true;
-                return scene;
+                return (Scene) scene.clone();
             }
-        }, e -> {
-            cloneError = e.getMessage();
-            d.ce("getScene", "EXCEPTION", e);
-            return null;
-        });
+        } else {
+            sceneUsedBefore = true;
+            return scene;
+        }
     }
-    public String cloneError = null;
 
     public boolean isSceneUsedBefore() {
         return sceneUsedBefore;

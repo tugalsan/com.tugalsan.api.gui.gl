@@ -27,17 +27,10 @@ public class TGC_GLRefModel extends TGC_GLRefAbstract {
                 childScene = model.getScene();
                 model.scene.matrixAutoUpdate = false;
                 childScene.matrixAutoUpdate = false;
-
                 animationClips = model.getAnimationClips(childScene);
-                if (childScene == null) {
-                    errorMessage = model.cloneError;
-                    status = TGC_GLLoadable.STATUS_ERROR();
-                    d.ce("lazyLoad", "name", name, "childScene == null", errorMessage);
-                } else {
-                    scene.add(childScene);
+                scene.add(childScene);
                     status = TGC_GLLoadable.STATUS_LOADED();
                     d.ci("lazyLoad", "name", name, "LOADED");
-                }
             }
         } else if (status == TGC_GLLoadable.STATUS_LOADED()) {
             if (animationClips != null) {

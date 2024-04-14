@@ -30,15 +30,9 @@ public class TGC_3JSRefPrimative extends TGC_GLRefAbstract {
                 childMesh = primative.getMesh();
                 primative.mesh.matrixAutoUpdate = false;
                 childMesh.matrixAutoUpdate = false;
-                if (childMesh == null) {
-                    errorMessage = primative.cloneError;
-                    status = TGC_GLLoadable.STATUS_ERROR();
-                    d.ce("lazyLoad", "name", name, "childMesh == null", errorMessage);
-                } else {
-                    scene.add(childMesh);
-                    status = TGC_GLLoadable.STATUS_LOADED();
-                    d.ci("lazyLoad", "name", name, "LOADED");
-                }
+                scene.add(childMesh);
+                status = TGC_GLLoadable.STATUS_LOADED();
+                d.ci("lazyLoad", "name", name, "LOADED");
             }
         } else if (status == TGC_GLLoadable.STATUS_LOADED()) {
             if (setLazyMaterialWireframe != null) {
