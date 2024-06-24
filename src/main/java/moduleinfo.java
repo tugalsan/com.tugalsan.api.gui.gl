@@ -8,7 +8,7 @@
 //    requires jsinterop.annotations;
 //    requires base;
 //    requires elemental2.core;
-//    requires com.tugalsan.api.runnable;
+//    
 //    requires com.tugalsan.api.shape;
 //    requires com.tugalsan.api.log;
 //    requires com.tugalsan.api.list;
