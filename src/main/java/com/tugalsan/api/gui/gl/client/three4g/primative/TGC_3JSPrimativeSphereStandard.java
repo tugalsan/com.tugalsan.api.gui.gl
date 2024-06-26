@@ -97,7 +97,7 @@ public class TGC_3JSPrimativeSphereStandard extends TGC_3JSPrimativeAbstract {
 
     @Override
     public String toString() {
-        return TGS_StringUtils.concat(TGC_3JSPrimativeSphereStandard.class.getSimpleName(), "-> name:", name,
+        return TGS_StringUtils.cmn().concat(TGC_3JSPrimativeSphereStandard.class.getSimpleName(), "-> name:", name,
                 ", radius:", String.valueOf(radius),
                 ", widthSegments:", String.valueOf(widthSegments),
                 ", heightSegments:", String.valueOf(heightSegments),

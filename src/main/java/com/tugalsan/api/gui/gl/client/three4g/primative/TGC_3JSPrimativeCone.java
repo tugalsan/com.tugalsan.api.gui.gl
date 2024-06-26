@@ -69,7 +69,7 @@ public class TGC_3JSPrimativeCone extends TGC_3JSPrimativeAbstract {
 
     @Override
     public String toString() {
-        return TGS_StringUtils.concat(TGC_3JSPrimativeCone.class.getSimpleName(), "-> name:", name,
+        return TGS_StringUtils.cmn().concat(TGC_3JSPrimativeCone.class.getSimpleName(), "-> name:", name,
                 ", radius:", String.valueOf(radius),
                 ", radialSegments:", String.valueOf(radialSegments),
                 ", heightSegments:", String.valueOf(heightSegments),

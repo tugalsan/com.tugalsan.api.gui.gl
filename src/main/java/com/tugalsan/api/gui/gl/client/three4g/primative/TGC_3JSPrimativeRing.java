@@ -70,7 +70,7 @@ public class TGC_3JSPrimativeRing extends TGC_3JSPrimativeAbstract {
 
     @Override
     public String toString() {
-        return TGS_StringUtils.concat(TGC_3JSPrimativeRing.class.getSimpleName(), "-> name:", name,
+        return TGS_StringUtils.cmn().concat(TGC_3JSPrimativeRing.class.getSimpleName(), "-> name:", name,
                 ", innerRadius:", String.valueOf(innerRadius),
                 ", outerRadius:", String.valueOf(outerRadius),
                 ", thetaSegments:", String.valueOf(thetaSegments),

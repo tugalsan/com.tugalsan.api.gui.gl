@@ -70,7 +70,7 @@ public class TGC_3JSPrimativeCylinder extends TGC_3JSPrimativeAbstract {
 
     @Override
     public String toString() {
-        return TGS_StringUtils.concat(TGC_3JSPrimativeCylinder.class.getSimpleName(), "-> name:", name,
+        return TGS_StringUtils.cmn().concat(TGC_3JSPrimativeCylinder.class.getSimpleName(), "-> name:", name,
                 ", radiusTop:", String.valueOf(radiusTop),
                 ", radiusBottom:", String.valueOf(radiusBottom),
                 ", radialSegments:", String.valueOf(radialSegments),

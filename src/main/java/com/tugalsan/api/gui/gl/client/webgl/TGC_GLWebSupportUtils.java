@@ -9,7 +9,7 @@ import com.tugalsan.api.string.client.*;
 public class TGC_GLWebSupportUtils {
  
     private static String isSupportedHTML(CharSequence name, boolean value) {
-        return TGS_StringUtils.concat("<b>", name, ": </b>", (value ? "Supported" : "Not Supported"), "</br>");
+        return TGS_StringUtils.cmn().concat("<b>", name, ": </b>", (value ? "Supported" : "Not Supported"), "</br>");
     }
 
     public static HTML createInformationWidget(boolean isWebGL20) {

@@ -35,7 +35,7 @@ public class TGC_3JSPrimativeSphereOctahedron extends TGC_3JSPrimativeAbstract {
 
     @Override
     public String toString() {
-        return TGS_StringUtils.concat(TGC_3JSPrimativeSphereOctahedron.class.getSimpleName(), "-> name:", name,
+        return TGS_StringUtils.cmn().concat(TGC_3JSPrimativeSphereOctahedron.class.getSimpleName(), "-> name:", name,
                 ", radius:", String.valueOf(radius),
                 ", detail:", String.valueOf(detail));
     }

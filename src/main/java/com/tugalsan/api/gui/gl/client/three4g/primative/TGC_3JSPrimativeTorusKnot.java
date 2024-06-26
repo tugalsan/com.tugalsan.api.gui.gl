@@ -67,7 +67,7 @@ public class TGC_3JSPrimativeTorusKnot extends TGC_3JSPrimativeAbstract {
 
     @Override
     public String toString() {
-        return TGS_StringUtils.concat(TGC_3JSPrimativeTorusKnot.class.getSimpleName(), "-> name:", name,
+        return TGS_StringUtils.cmn().concat(TGC_3JSPrimativeTorusKnot.class.getSimpleName(), "-> name:", name,
                 ", radiusTorus:", String.valueOf(radiusTorus),
                 ", radiusTube:", String.valueOf(radiusTube),
                 ", radialSegments:", String.valueOf(radialSegments),

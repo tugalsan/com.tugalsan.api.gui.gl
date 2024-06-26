@@ -60,7 +60,7 @@ public class TGC_3JSPrimativeLathe extends TGC_3JSPrimativeAbstract {
 
     @Override
     public String toString() {
-        return TGS_StringUtils.concat(TGC_3JSPrimativeLathe.class.getSimpleName(), "-> name:", name,
+        return TGS_StringUtils.cmn().concat(TGC_3JSPrimativeLathe.class.getSimpleName(), "-> name:", name,
                 ", points:", String.valueOf(points),
                 ", segments:", String.valueOf(segments),
                 ", phiStart:", String.valueOf(phiStart),
