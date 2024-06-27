@@ -1,7 +1,7 @@
 package com.tugalsan.api.gui.gl.client.webgl;
 
 import com.google.gwt.user.client.ui.*;
-import com.tugalsan.api.callable.client.TGS_CallableType2_Run;
+import com.tugalsan.api.function.client.TGS_Func_In2;
 import java.util.*;
 import java.util.stream.*;
 
@@ -28,7 +28,7 @@ public class TGC_GLWeb {
     public Integer createCanvasId(int xOffSet, int yOffSet, int width, int height, Integer qualityPercent_default100, TGC_GLWebRender render) {
         var canvasId = canvasCount;
 
-        var onFocused = (TGS_CallableType2_Run<Integer, Boolean>) (Integer canvasId1, Boolean isFocused) -> {
+        var onFocused = (TGS_Func_In2<Integer, Boolean>) (Integer canvasId1, Boolean isFocused) -> {
             if (isFocused) {
                 canvasFocusedId = canvasId1;
                 return;
