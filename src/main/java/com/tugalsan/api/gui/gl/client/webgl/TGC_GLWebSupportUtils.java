@@ -5,9 +5,9 @@ import com.google.gwt.user.client.*;
 import com.google.gwt.user.client.ui.*;
 import com.shc.webgl4j.client.*;
 import com.tugalsan.api.string.client.*;
- 
+
 public class TGC_GLWebSupportUtils {
- 
+
     private static String isSupportedHTML(CharSequence name, boolean value) {
         return TGS_StringUtils.cmn().concat("<b>", name, ": </b>", (value ? "Supported" : "Not Supported"), "</br>");
     }
@@ -39,16 +39,44 @@ public class TGC_GLWebSupportUtils {
         webglInfo.append("<h2>WebGL Context</h2>");
         webglInfo.append("<p style='padding-left: 40px;'>");
         {
-            webglInfo.append("<b>WebGL version: </b>").append(String.valueOf(WebGL10.glGetParameter(WebGL10.GL_VERSION))).append("</br>");
-            webglInfo.append("<b>GLSL version: </b>").append(String.valueOf(WebGL10.glGetParameter(WebGL10.GL_SHADING_LANGUAGE_VERSION))).append("</br>");
-            webglInfo.append("<b>WebGL renderer: </b>").append(String.valueOf(WebGL10.glGetParameter(WebGL10.GL_RENDERER))).append("</br>");
-            webglInfo.append("<b>WebGL vendor: </b>").append(String.valueOf(WebGL10.glGetParameter(WebGL10.GL_VENDOR))).append("</br>");
-
+            {
+                var idx = WebGL10.GL_VERSION;
+                var prm = WebGL10.glGetParameter(idx);
+                var str = String.valueOf(prm);
+                webglInfo.append("<b>WebGL version: </b>").append(str).append("</br>");
+            }
+            {
+                var idx = WebGL10.GL_SHADING_LANGUAGE_VERSION;
+                var prm = WebGL10.glGetParameter(idx);
+                var str = String.valueOf(prm);
+                webglInfo.append("<b>GLSL version: </b>").append(str).append("</br>");
+            }
+            {
+                var idx = WebGL10.GL_RENDERER;
+                var prm = WebGL10.glGetParameter(idx);
+                var str = String.valueOf(prm);
+                webglInfo.append("<b>WebGL renderer: </b>").append(str).append("</br>");
+            }
+            {
+                var idx = WebGL10.GL_VENDOR;
+                var prm = WebGL10.glGetParameter(idx);
+                var str = String.valueOf(prm);
+                webglInfo.append("<b>WebGL vendor: </b>").append(str).append("</br>");
+            }
             if (WEBGL_debug_renderer_info.isSupported()) {
                 WEBGL_debug_renderer_info.enableExtension();
-
-                webglInfo.append("<b>Unmasked renderer: </b>").append(String.valueOf(WebGL10.glGetParameter(WEBGL_debug_renderer_info.GL_UNMASKED_RENDERER_WEBGL))).append("</br>");
-                webglInfo.append("<b>Unmasked vendor: </b>").append(String.valueOf(WebGL10.glGetParameter(WEBGL_debug_renderer_info.GL_UNMASKED_VENDOR_WEBGL))).append("</br>");
+                {
+                    var idx = WEBGL_debug_renderer_info.GL_UNMASKED_RENDERER_WEBGL;
+                    var prm = WebGL10.glGetParameter(idx);
+                    var str = String.valueOf(prm);
+                    webglInfo.append("<b>Unmasked renderer: </b>").append(str).append("</br>");
+                }
+                {
+                    var idx = WEBGL_debug_renderer_info.GL_UNMASKED_VENDOR_WEBGL;
+                    var prm = WebGL10.glGetParameter(idx);
+                    var str = String.valueOf(prm);
+                    webglInfo.append("<b>Unmasked vendor: </b>").append(str).append("</br>");
+                }
             }
         }
         webglInfo.append("</p>");

@@ -98,7 +98,7 @@ public class TGC_GLWeb {
     }
 
     public void initAll() {
-        IntStream.range(0, canvasCount).parallel().forEach(canvasId -> init(canvasId));
+        IntStream.range(0, canvasCount).forEach(canvasId -> init(canvasId));
     }
 
     public void setCanvasNull(int canvasId) {
