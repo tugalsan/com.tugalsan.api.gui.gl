@@ -64,7 +64,7 @@ public class TGC_GLFont extends TGC_GLLoadable {
         };
         var loader = new FontLoader(program.loadingManager);
         d.ci("lazyLoad", "LOADING", "url", url);
-        loader.crossOrigin = null;//TODO NOT WORKING
+        loader.crossOrigin = null;//WARNING: When URL not reachable, the error shows as cross origin
         loader.load(url, olc, opc, oec);
         status = TGC_GLLoadable.STATUS_LOADING();
     }
