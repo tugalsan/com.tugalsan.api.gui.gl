@@ -14,7 +14,7 @@ import com.tugalsan.api.gui.gl.client.three4g.model.*;
 
 abstract public class TGC_GLProgramAbstract {//MINIMAL PROGRAM 
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLProgramAbstract.class);
+    final private static TGC_Log d = TGC_Log.of(true, TGC_GLProgramAbstract.class);
 
     public TGC_GLMath math;
     public TGC_GLColor color;
@@ -30,6 +30,7 @@ abstract public class TGC_GLProgramAbstract {//MINIMAL PROGRAM
 
     public TGC_GLProgramAbstract(CharSequence optional_dracoLoaderDecoderPath) {
         TGC_GLModel.DracoLoaderDecoderPath = optional_dracoLoaderDecoderPath == null ? null : optional_dracoLoaderDecoderPath.toString();
+        d.ci("TGC_GLModel.DracoLoaderDecoderPath", TGC_GLModel.DracoLoaderDecoderPath);
         math = new TGC_GLMath(this);
         window = new TGC_GLWindow(this);
         fonts = new TGC_GLFonts(this);

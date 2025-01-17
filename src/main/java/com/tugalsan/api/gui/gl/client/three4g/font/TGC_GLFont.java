@@ -11,7 +11,7 @@ import com.tugalsan.api.log.client.TGC_Log;
 
 public class TGC_GLFont extends TGC_GLLoadable {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_GLFont.class);
+    final private static TGC_Log d = TGC_Log.of(true, TGC_GLFont.class);
 
     public TGC_GLFont(TGC_GLProgramAbstract program, CharSequence url) {
         super(program);
@@ -43,11 +43,11 @@ public class TGC_GLFont extends TGC_GLLoadable {
             d.ci("lazyLoad", "onLoad", url, url);
             if (o instanceof Font) {
                 font = (Font) o;
-                d.ci("lazyLoad", "onLoad", "is instanceof Font");
+                d.ci("lazyLoad", "onLoad", "is instanceof Font", url);
                 status = TGC_GLLoadable.STATUS_LOADED();
             } else {
                 errorMessage = "ERROR: " + TGC_GLFont.class.getSimpleName() + ".o is not instanceof Font";
-                d.ce("lazyLoad", "onLoad", errorMessage);
+                d.ce("lazyLoad", "onLoad", errorMessage, url);
                 status = TGC_GLLoadable.STATUS_ERROR();
             }
         };
@@ -59,12 +59,13 @@ public class TGC_GLFont extends TGC_GLLoadable {
         };
         OnErrorCallback oec = e -> {
             errorMessage = e.toString();
-            d.ce("lazyLoad", "onError", errorMessage);
+            d.ce("lazyLoad", "onError", errorMessage, url);
             status = TGC_GLLoadable.STATUS_ERROR();
         };
         var loader = new FontLoader(program.loadingManager);
+        d.ci("lazyLoad", "LOADING", "url", url);
+        loader.crossOrigin = null;//TODO NOT WORKING
         loader.load(url, olc, opc, oec);
         status = TGC_GLLoadable.STATUS_LOADING();
-        d.ci("lazyLoad", "LOADING", "url" + url);
     }
 }
