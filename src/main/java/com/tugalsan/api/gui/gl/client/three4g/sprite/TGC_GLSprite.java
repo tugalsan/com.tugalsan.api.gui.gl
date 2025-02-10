@@ -1,5 +1,6 @@
 package com.tugalsan.api.gui.gl.client.three4g.sprite;
 
+import com.tugalsan.api.function.client.maythrow.checkedexceptions.TGS_FuncMTCEUtils;
 import com.tugalsan.api.gui.gl.client.three4g.TGC_GLProgramAbstract;
 import com.tugalsan.api.gui.gl.client.three4g.common.TGC_GLLoadable;
 import com.tugalsan.api.gui.gl.client.three4g.texture.TGC_GLTexture2DAbstract;
@@ -7,7 +8,7 @@ import org.treblereel.gwt.three4g.materials.SpriteMaterial;
 import org.treblereel.gwt.three4g.math.Vector3;
 import org.treblereel.gwt.three4g.objects.Sprite;
 import com.tugalsan.api.log.client.TGC_Log;
-import com.tugalsan.api.unsafe.client.*;
+
 
 public class TGC_GLSprite extends TGC_GLLoadable {
 
@@ -41,7 +42,7 @@ public class TGC_GLSprite extends TGC_GLLoadable {
     protected Vector3 lazyScale = new Vector3();
 
     public Sprite getSprite() {
-        return TGS_UnSafe.call(() -> {
+        return TGS_FuncMTCEUtils.call(() -> {
             if (meshUsedBefore) {
                 return (Sprite) sprite.clone();
             } else {

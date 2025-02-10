@@ -1,5 +1,6 @@
 package com.tugalsan.api.gui.gl.client.three4g.primative;
 
+import com.tugalsan.api.function.client.maythrow.checkedexceptions.TGS_FuncMTCEUtils;
 import com.tugalsan.api.gui.gl.client.three4g.TGC_GLProgramAbstract;
 import com.tugalsan.api.gui.gl.client.three4g.common.TGC_GLLoadable;
 import com.tugalsan.api.gui.gl.client.three4g.texture.TGC_GLTexture2DAbstract;
@@ -8,7 +9,7 @@ import org.treblereel.gwt.three4g.core.BufferGeometry;
 import org.treblereel.gwt.three4g.math.Vector3;
 import org.treblereel.gwt.three4g.objects.Mesh;
 import com.tugalsan.api.log.client.TGC_Log;
-import com.tugalsan.api.unsafe.client.*;
+
 
 abstract public class TGC_3JSPrimativeAbstract extends TGC_GLLoadable {
 
@@ -45,7 +46,7 @@ abstract public class TGC_3JSPrimativeAbstract extends TGC_GLLoadable {
     protected Vector3 lazyScale = new Vector3();
 
     public Mesh getMesh() {
-        return TGS_UnSafe.call(() -> {
+        return TGS_FuncMTCEUtils.call(() -> {
             if (meshUsedBefore) {
                 return (Mesh) mesh.clone();
             } else {
