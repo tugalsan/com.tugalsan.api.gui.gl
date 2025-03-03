@@ -23,7 +23,7 @@ public interface TGC_GLResourceUtils extends ClientBundle {//VARS CANNOT BE PRIV
     final public static List<String> addedLibNames = TGS_ListUtils.of();
 
     public static boolean isLibAdded(String libName) {//example libName: getStatsMin
-        return addedLibNames.stream().filter(nm -> Objects.equals(nm, libName)).findAny().isPresent();
+        return addedLibNames.stream().anyMatch(nm -> Objects.equals(nm, libName));
     }
 
     @ClientBundle.Source("loaders/DRACOLoader.js")
