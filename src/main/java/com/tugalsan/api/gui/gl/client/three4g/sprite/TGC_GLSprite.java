@@ -1,6 +1,6 @@
 package com.tugalsan.api.gui.gl.client.three4g.sprite;
 
-import com.tugalsan.api.function.client.maythrow.checkedexceptions.TGS_FuncMTCEUtils;
+import com.tugalsan.api.function.client.maythrowexceptions.checked.TGS_FuncMTCUtils;
 import com.tugalsan.api.gui.gl.client.three4g.TGC_GLProgramAbstract;
 import com.tugalsan.api.gui.gl.client.three4g.common.TGC_GLLoadable;
 import com.tugalsan.api.gui.gl.client.three4g.texture.TGC_GLTexture2DAbstract;
@@ -42,7 +42,7 @@ public class TGC_GLSprite extends TGC_GLLoadable {
     protected Vector3 lazyScale = new Vector3();
 
     public Sprite getSprite() {
-        return TGS_FuncMTCEUtils.call(() -> {
+        return TGS_FuncMTCUtils.call(() -> {
             if (meshUsedBefore) {
                 return (Sprite) sprite.clone();
             } else {

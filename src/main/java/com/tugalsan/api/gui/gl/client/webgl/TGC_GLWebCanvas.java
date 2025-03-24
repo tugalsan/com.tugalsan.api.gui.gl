@@ -5,7 +5,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.shc.webgl4j.client.WebGL10;
 import com.shc.webgl4j.client.WebGL20;
 import com.shc.webgl4j.client.WebGLContext;
-import com.tugalsan.api.function.client.maythrow.uncheckedexceptions.TGS_FuncMTUCE_In2;
+import com.tugalsan.api.function.client.maythrowexceptions.unchecked.TGS_FuncMTU_In2;
 import com.tugalsan.api.log.client.TGC_Log;
 
  
@@ -33,9 +33,9 @@ public class TGC_GLWebCanvas {
     public int width, height, performansWidth, performansHeight;
     public Integer qualityPercent_default100;
     public TGC_GLWeb gl;
-    public TGS_FuncMTUCE_In2<Integer, Boolean> onFocused;
+    public TGS_FuncMTU_In2<Integer, Boolean> onFocused;
 
-    public TGC_GLWebCanvas(int id, TGC_GLWeb gl, int xOffSet, int yOffSet, int width, int height, Integer qualityPercent_default100, TGC_GLWebRender render, TGS_FuncMTUCE_In2<Integer, Boolean> onFocused) {
+    public TGC_GLWebCanvas(int id, TGC_GLWeb gl, int xOffSet, int yOffSet, int width, int height, Integer qualityPercent_default100, TGC_GLWebRender render, TGS_FuncMTU_In2<Integer, Boolean> onFocused) {
         this.onFocused = onFocused;
         this.canvasId = id;
         canvas = Canvas.createIfSupported();

@@ -1,6 +1,6 @@
 package com.tugalsan.api.gui.gl.client.three4g.model;
 
-import com.tugalsan.api.function.client.maythrow.checkedexceptions.TGS_FuncMTCEUtils;
+import com.tugalsan.api.function.client.maythrowexceptions.checked.TGS_FuncMTCUtils;
 import org.treblereel.gwt.three4g.extensions.resources.js.TGC_GLResourceUtils;
 import java.util.Objects;
 import java.util.stream.IntStream;
@@ -117,7 +117,7 @@ public class TGC_GLModel extends TGC_GLLoadable {
     }
 
     public Scene getScene() {
-        return TGS_FuncMTCEUtils.call(() -> {
+        return TGS_FuncMTCUtils.call(() -> {
             if (sceneUsedBefore) {
                 if (FIX_SCENE_CLONNING()) {
                     return Js.uncheckedCast(SkeletonUtils.clone(scene));
