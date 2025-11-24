@@ -27,7 +27,7 @@ public class TGC_GLStats {
         TGC_GLDomUtils.addToBody(container);
         setVisible(visible);
     }
-    final public static TGS_ShapeDimension dimension = new TGS_ShapeDimension(80, 48);
+    final public static TGS_ShapeDimension<Integer> dimension = new TGS_ShapeDimension(80, 48);
     final public TGC_GLProgramAbstract program;
     final public TGC_3JSStatsNative stats;
     public HTMLDivElement container;
