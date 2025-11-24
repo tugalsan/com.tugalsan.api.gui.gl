@@ -16,7 +16,7 @@ public class TGC_GLCanvas {
     }
 
     public TGC_GLCanvas(TGC_GLProgramAbstract program) {
-        this(program, new TGS_ShapeRectangle(0, 0, TGC_GLStats.dimension.width, TGC_GLStats.dimension.height));
+        this(program, TGS_ShapeRectangle.of(0, 0, TGC_GLStats.dimension.width, TGC_GLStats.dimension.height));
     }
 
     public TGC_GLCanvas(TGC_GLProgramAbstract program, TGS_ShapeRectangle<Integer> locDim) {

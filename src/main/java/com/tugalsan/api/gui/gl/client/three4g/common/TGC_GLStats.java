@@ -22,7 +22,7 @@ public class TGC_GLStats {
         container.style.bottom = "0";
         container.style.right = "0";
         container.appendChild(stats.dom);
-        positionAndLocation = new TGS_ShapeRectangle(location, dimension);
+        positionAndLocation = TGS_ShapeRectangle.of(location, dimension);
         TGC_GLDomUtils.setLocationAndDimension(container, positionAndLocation);
         TGC_GLDomUtils.addToBody(container);
         setVisible(visible);
